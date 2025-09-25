@@ -7,6 +7,7 @@ function Button({
   disable = false,
   icon: IconComponent,
   onClick,
+  type='submit'
 }) {
   const style =
     variant === 'primary'
@@ -27,7 +28,7 @@ function Button({
       ? 'h-14 w-[300px] text-lg'
       : 'h-12 w-[200px] text-base' // fallback
   return (
-    <button className={`${style} ${sizeOfComp} cursor-pointer rounded-xl `}>
+    <button type={type} className={`${style} ${sizeOfComp} cursor-pointer rounded-xl `}>
       {label}
     </button>
   )
